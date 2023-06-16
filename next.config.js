@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+/** @type {import('./api/products').products} */
+const nextConfig = {};
 
-module.exports = nextConfig
+module.exports = nextConfig;

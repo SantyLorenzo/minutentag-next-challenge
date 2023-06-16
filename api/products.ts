@@ -13,24 +13,42 @@
 // that displays all the information for a single product.
 
 // Technical requirements:
-//  - Build an API endpoint that returns stock and price information for a given product SKU code.
 //  - The PDP must update the stock and price information every 5 seconds using the API endpoint.
 //  - The products.js file should not be modified.
 //  - The stock-price.js file should only be modified to test the update every 5 seconds requirement.
 //  - The PLP should be the home page
 //  - The PDP should be accessible through the URL /productId-productBrand (i.e. for a product with id 5
 // and brand "Modelo Especial", the URL should be /5-modelo-especial)
+
+//  - Build an API endpoint that returns stock and price information for a given product SKU code.
 //  - The API endpoint to get the stock and price information should be GET /api/stock-price/code
 // (i.e. for a product SKU with code 123, the URL should be /api/stock-price/123)
 
 // Keep in mind that the prices are stored in cents, but should be displayed in dollars with 2 digits
 // cents (e.g. if a product's price is 4350, then it should be shown as $43.50).
 
-export default [
+export type TProduct = {
+  id: number;
+  brand: string;
+  image: string;
+  style: string;
+  substyle: string;
+  abv: string;
+  origin: string;
+  information: string;
+  skus: TSku[];
+};
+
+export type TSku = {
+  code: string;
+  name: string;
+};
+
+export const products: TProduct[] = [
   {
     id: 127,
     brand: "Modelo Especial",
-    image: "/products/modelo-especial.jpeg",
+    image: "/products/modelo.webp",
     style: "Lager",
     substyle: "Light Lager",
     abv: "4.4%",
@@ -55,7 +73,7 @@ export default [
   {
     id: 374,
     brand: "Miller Lite",
-    image: "/products/miller-lite.png",
+    image: "/products/miller.png",
     style: "Lager",
     substyle: "Light Lager",
     abv: "4.17%",
@@ -76,7 +94,7 @@ export default [
   {
     id: 743,
     brand: "Corona Premier",
-    image: "/products/corona.jpg",
+    image: "/products/corona.png",
     style: "Lager",
     substyle: "Mexican Lager",
     abv: "4.0%",
@@ -97,7 +115,7 @@ export default [
   {
     id: 841,
     brand: "Lagunitas IPA",
-    image: "/products/lagunitas.jpg",
+    image: "/products/budweiser.png",
     style: "Ale",
     substyle: "Indian Pale Ale",
     abv: "6.2%",

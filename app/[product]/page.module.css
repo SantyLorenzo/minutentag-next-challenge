@@ -1,0 +1,38 @@
+.section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand {
+  font-size: 32px;
+  margin-bottom: 32px;
+}
+
+.data {
+  font-size: 18px;
+  margin: 8px 0px;
+}
+
+.price {
+  font-size: 20px;
+  margin: 32px 0px;
+}
+
+.table {
+  margin: 32px 0px;
+}
+
+.tableHead {
+  text-align: left;
+  font-weight: bold;
+  padding: 12px 0px;
+  color: #919191;
+}
