@@ -15,7 +15,7 @@ const ProductDetails = async (props: TProductDetailsProps) => {
   const productData = products.find((product) => `${product.id}` === productId);
 
   if (!productData) {
-    return <p>Ups, no hay data de este producto.</p>;
+    return <p>Ups, no hay informacion de este producto.</p>;
   }
 
   return (

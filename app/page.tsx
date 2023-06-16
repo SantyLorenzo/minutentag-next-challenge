@@ -18,10 +18,8 @@ export default async function Home() {
               alt={product.brand}
               src={product.image}
             />
+
             <p className={styles.brand}>{product.brand}</p>
-            {/* <p className={styles.brand}>Abv: {product.abv}</p>
-            <p className={styles.brand}>Style: {product.style}</p>
-            <p className={styles.brand}>Origin: {product.origin}</p> */}
 
             <Link href={`/${product.id}-${parseProductBrand(product.brand)}`}>
               Ver Detalles
